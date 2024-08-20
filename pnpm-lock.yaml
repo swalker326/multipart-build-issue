@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@conform-to/react':
+        specifier: ^1.1.5
+        version: 1.1.5(react@18.3.1)
+      '@conform-to/zod':
+        specifier: ^1.1.5
+        version: 1.1.5(zod@3.23.8)
+      '@mjackson/multipart-parser':
+        specifier: ^0.6.2
+        version: 0.6.2
       '@remix-run/node':
         specifier: ^2.11.1
         version: 2.11.1(typescript@5.5.4)
@@ -26,6 +35,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@remix-run/dev':
         specifier: ^2.11.1
@@ -231,6 +243,19 @@ packages:
   '@babel/types@7.25.2':
     resolution: {integrity: sha512-YTnYtra7W9e6/oAZEHj0bJehPRUlLH9/fbpT5LfB0NhQXyALCRkRs3zH9v07IYhkgpqX6Z78FnuccZr/l4Fs4Q==}
     engines: {node: '>=6.9.0'}
+
+  '@conform-to/dom@1.1.5':
+    resolution: {integrity: sha512-tWI3YxWvDaZFSl4QN8Y0WbgBxsWEfcTrSMtKic3YTt/hGVJXjQ8qURBdsJXudzJ38zwAr5GhpLWmyI6BbG9+gA==}
+
+  '@conform-to/react@1.1.5':
+    resolution: {integrity: sha512-QyzJ8SIazHmez7qkMffypICDBwU+Ht5TPe+C4MTP2dro0N0Hu6LsfLq7mMWFJyAJ7IYxT1BMzfoFj28jheIIOw==}
+    peerDependencies:
+      react: '>=18'
+
+  '@conform-to/zod@1.1.5':
+    resolution: {integrity: sha512-ho/742wgfTWf2u5tKo4GT88xcKcvTOCDPOi4o1WEmePPmJNP5ezeMQSKSdKdS0rFinZl9ZTH8gV5FQUNPHAA7A==}
+    peerDependencies:
+      zod: ^3.21.0
 
   '@emotion/hash@0.9.2':
     resolution: {integrity: sha512-MyqliTZGuOm3+5ZRSaaBGP3USLw6+EGykkwZns2EPC5g8jJ4z9OrdZY9apkl3+UP9+sdz76YYkwCKP5gh8iY3g==}
@@ -563,6 +588,12 @@ packages:
 
   '@mdx-js/mdx@2.3.0':
     resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
+
+  '@mjackson/headers@0.5.1':
+    resolution: {integrity: sha512-sJpFgecPT/zJvwk3GRNVWNs8EkwaJoUNU2D0VMlp+gDJs6cuSTm1q/aCZi3ZtuV6CgDEQ4l2ZjUG3A9JrQlbNA==}
+
+  '@mjackson/multipart-parser@0.6.2':
+    resolution: {integrity: sha512-xG3mINK6gFVposxu83x3n4ueJfjWoxOl3UaBADXNjh/NL84L+Zc/kmz2mTQA9GHvHFPAMlXqPSLTocIDkmhemQ==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3422,6 +3453,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -3641,6 +3675,18 @@ snapshots:
       '@babel/helper-string-parser': 7.24.8
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
+
+  '@conform-to/dom@1.1.5': {}
+
+  '@conform-to/react@1.1.5(react@18.3.1)':
+    dependencies:
+      '@conform-to/dom': 1.1.5
+      react: 18.3.1
+
+  '@conform-to/zod@1.1.5(zod@3.23.8)':
+    dependencies:
+      '@conform-to/dom': 1.1.5
+      zod: 3.23.8
 
   '@emotion/hash@0.9.2': {}
 
@@ -3863,6 +3909,12 @@ snapshots:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
+
+  '@mjackson/headers@0.5.1': {}
+
+  '@mjackson/multipart-parser@0.6.2':
+    dependencies:
+      '@mjackson/headers': 0.5.1
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -7400,5 +7452,7 @@ snapshots:
   yaml@2.5.0: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
